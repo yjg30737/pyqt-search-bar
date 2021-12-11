@@ -2,7 +2,7 @@ import os
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton, QGridLayout, QLabel, \
-    QHBoxLayout, QApplication
+    QHBoxLayout, QApplication, QCompleter
 from PyQt5.QtCore import Qt, pyqtSignal
 
 
@@ -126,6 +126,9 @@ class SearchBar(QWidget):
     def getSearchBar(self):
         return self.__searchLineEdit
 
+    def getSearchLineEdit(self):
+        return self.__searchLineEdit
+
     def getSearchButton(self):
         return self.__searchBtn
 
@@ -145,6 +148,9 @@ class SearchBar(QWidget):
 
     def __hideSearchBar(self):
         self.hide()
+
+    def setCompleter(self, completer: QCompleter):
+        self.__searchLineEdit.setCompleter(completer)
 
     def showEvent(self, e):
         self.__searchLineEdit.setFocus()
