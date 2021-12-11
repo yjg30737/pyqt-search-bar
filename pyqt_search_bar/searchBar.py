@@ -63,11 +63,12 @@ class SearchBar(QWidget):
         self._topWidget = QWidget()
         self._topWidget.setLayout(lay)
 
-        searchBarLayout = QGridLayout()
-        searchBarLayout.addWidget(self._topWidget)
+        lay = QGridLayout()
+        lay.addWidget(self._topWidget)
 
         searchWidget = QWidget()
-        searchWidget.setLayout(searchBarLayout)
+        searchWidget.setLayout(lay)
+        lay.setContentsMargins(0, 0, 0, 0)
 
         lay = QGridLayout()
         lay.addWidget(searchWidget)
