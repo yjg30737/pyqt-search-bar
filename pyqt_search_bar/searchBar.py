@@ -101,6 +101,12 @@ class SearchBar(QWidget):
         PyQtResourceHelper.setStyleSheet([self.__searchLineEdit, self.__searchBar, self],
                                          ['style/lineedit.css', 'style/search_bar.css', 'style/widget.css'])
 
+    def setSearchIcon(self, icon: str):
+        self.__searchBtn.setIcon(icon)
+
+    def setCloseIcon(self, icon: str):
+        self.__closeBtn.setIcon(icon)
+
     def setPlaceHolder(self, text: str):
         self.__searchLineEdit.setPlaceholderText(text)
 
