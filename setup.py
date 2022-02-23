@@ -7,8 +7,8 @@ setup(
     author_email='yjg30737@gmail.com',
     license='MIT',
     packages=find_packages(),
-    package_data={'pyqt_search_bar.style': ['button.css', 'lineedit.css'],
-                  'pyqt_search_bar.ico': ['close.png', 'search.svg']},
+    package_data={'pyqt_search_bar.style': ['button.css', 'lineedit.css', 'search_bar.css', 'widget.css'],
+                  'pyqt_search_bar.ico': ['close.svg', 'search.svg']},
     description='PyQt search bar',
     url='https://github.com/yjg30737/pyqt-search-bar.git',
     install_requires=[

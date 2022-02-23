@@ -4,6 +4,8 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton, QGridLayout, QLabel, \
     QHBoxLayout, QApplication, QCompleter
 from PyQt5.QtCore import Qt, pyqtSignal
+from pyqt_resource_helper import PyQtResourceHelper
+from pyqt_svg_icon_pushbutton import SvgIconPushButton
 
 
 class SearchBar(QWidget):
@@ -15,14 +17,14 @@ class SearchBar(QWidget):
         super().__init__(parent)
         # search bar label
         self.__label = QLabel()
-        self.__closeBtn = QPushButton()
+        self.__closeBtn = SvgIconPushButton()
         self.__btns = []
 
         self._initUi()
 
     def _initUi(self):
         self.__searchLineEdit = QLineEdit()
-        self.__searchBtn = QPushButton()
+        self.__searchBtn = SvgIconPushButton()
 
         self.__btns.append(self.__searchBtn)
         self.__btns.append(self.__closeBtn)
@@ -94,32 +96,10 @@ class SearchBar(QWidget):
         self.__label.setVisible(visibility)
 
     def __setStyle(self):
-        border_style = 'QWidget#searchBar { border: 1px solid gray; }'
-
-        rel_dirname = os.path.dirname(os.path.relpath(__file__, os.getcwd()))
-
-        css_file_path = os.path.join(rel_dirname, r'style/lineedit.css')
-        css_file = open(css_file_path)
-        lineedit_style_code = css_file.read()
-        css_file.close()
-
-        css_file_path = os.path.join(rel_dirname, r'style/button.css')
-        css_file = open(css_file_path)
-        btn_style_code = css_file.read()
-        css_file.close()
-
-        for btn in self.__btns:
-            btn.setStyleSheet(btn_style_code)
-
-        search_btn_ico = 'ico/search.png'
-        close_btn_ico = 'ico/close.png'
-
-        self.__searchLineEdit.setStyleSheet(lineedit_style_code)
-        self.__searchBar.setStyleSheet(border_style)
-        self.__searchBtn.setIcon(QIcon(os.path.join(rel_dirname, search_btn_ico)))
-        self.__closeBtn.setIcon(QIcon(os.path.join(rel_dirname, close_btn_ico)))
-
-        self.setStyleSheet('QWidget { padding: 5px; }')
+        self.__searchBtn.setIcon('ico/search.svg')
+        self.__closeBtn.setIcon('ico/close.svg')
+        PyQtResourceHelper.setStyleSheet([self.__searchLineEdit, self.__searchBar, self],
+                                         ['style/lineedit.css', 'style/search_bar.css', 'style/widget.css'])
 
     def setPlaceHolder(self, text: str):
         self.__searchLineEdit.setPlaceholderText(text)
