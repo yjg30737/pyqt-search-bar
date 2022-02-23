@@ -15,6 +15,7 @@ PyQt5 >= 5.8
 * Available to execute the search with either pressing enter or pressing the search button
 * Toggled search button based on whether searchLineEdit(type is QLineEdit) is empty or not.
 * Being able to get searchLineEdit and searchButton, closeButton to let user customize on their own
+* Get search bar, search line edit, search/close button with ```getSearchBar```, ```getSearchLineEdit```, ```getSearchButton```, ```getCloseButton``` to change style or feature.
 
 ## Example
 ### Basic
