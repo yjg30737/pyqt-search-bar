@@ -12,14 +12,14 @@ PyQt5 >= 5.8
 * <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
 
 ## Feature
-* Being able to set the label of the search bar with ```setLabel(visibility: bool, text: str)```
-* Being able to close the search bar with ```setCloseBtn(visibility: bool)```
-* Providing ```searched(text: str)``` signal to activate user-defined method after search
-* Set place holder directly with ```setPlaceHolder(text: str)```
-* Available to execute the search with either pressing enter or pressing the search button
+* Being able to set the label of the search bar with ```setLabel(visibility: bool, text: str)```.
+* Being able to close the search bar with ```setCloseBtn(visibility: bool)```.
+* Providing ```searched(text: str)``` signal to activate user-defined method after search.
+* Set place holder directly with ```setPlaceHolder(text: str)```.
+* Available to execute the search with either pressing enter or pressing the search button.
 * Toggled search button based on whether searchLineEdit(type is QLineEdit) is empty or not.
-* Being able to get searchLineEdit and searchButton, closeButton to let user customize on their own
-* Set search/close button's icon with ```setSearchIcon(icon: str)```, ```setCloseIcon(icon: str)```
+* Being able to get searchLineEdit and searchButton, closeButton to let user customize on their own.
+* Set search/close button's icon with ```setSearchIcon(icon: str)```, ```setCloseIcon(icon: str)```.
 * Get search bar, search line edit, search/close button with ```getSearchBar```, ```getSearchLineEdit```, ```getSearchButton```, ```getCloseButton``` to change style or feature.
 
 ## Example
