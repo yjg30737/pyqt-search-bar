@@ -1,8 +1,7 @@
-import os
+import os, inspect, sys
 
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton, QGridLayout, QLabel, \
-    QHBoxLayout, QApplication, QCompleter
+from PyQt5.QtWidgets import QWidget, QLineEdit, QGridLayout, QLabel, \
+    QHBoxLayout, QCompleter
 from PyQt5.QtCore import Qt, pyqtSignal
 from pyqt_resource_helper import PyQtResourceHelper
 from pyqt_svg_icon_pushbutton import SvgIconPushButton
@@ -96,8 +95,9 @@ class SearchBar(QWidget):
         self.__label.setVisible(visibility)
 
     def __setStyle(self):
-        self.__searchBtn.setIcon('ico/search.svg')
-        self.__closeBtn.setIcon('ico/close.svg')
+        caller_path = os.path.dirname(inspect.getframeinfo(sys._getframe(1)).filename)
+        self.__searchBtn.setIcon(os.path.join(caller_path, 'ico\search.svg').replace('\\', '/'))
+        self.__closeBtn.setIcon(os.path.join(caller_path, 'ico\close.svg').replace('\\', '/'))
         PyQtResourceHelper.setStyleSheet([self.__searchLineEdit, self.__searchBar, self],
                                          ['style/lineedit.css', 'style/search_bar.css', 'style/widget.css'])
 
