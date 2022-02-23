@@ -25,10 +25,10 @@ PyQt5 >= 5.8
 ## Example
 ### Basic
 Code Example
+
 ```python
 from PyQt5.QtWidgets import QApplication
 from pyqt_search_bar import SearchBar
-
 
 if __name__ == "__main__":
     import sys
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     searchBar = SearchBar()
     searchBar.searched.connect(print)
-    searchBar.setCloseBtn(True)
+    searchBar.setCloseBtnVisible(True)
     searchBar.setLabel(True, 'abc')
     searchBar.setPlaceHolder('abcd')
     searchBar.show()

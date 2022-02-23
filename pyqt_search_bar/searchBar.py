@@ -84,7 +84,7 @@ class SearchBar(QWidget):
         self.searched.emit(text)
 
     # ex) searchBar.setCloseBtn(True)
-    def setCloseBtn(self, visibility: bool = True):
+    def setCloseBtnVisible(self, visibility: bool = True):
         self.__closeBtn.setVisible(visibility)
         self.__closeBtn.clicked.connect(self.__hideSearchBar)
 
