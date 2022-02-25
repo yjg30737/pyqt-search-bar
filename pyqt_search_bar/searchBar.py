@@ -35,7 +35,7 @@ class SearchBar(QWidget):
         lay.addWidget(self.__searchLineEdit)
         lay.addWidget(self.__searchBtn)
         self.__searchBar.setLayout(lay)
-        lay.setContentsMargins(0, 0, 0, 0)
+        lay.setContentsMargins(0, 0, 2, 0)
         lay.setSpacing(2)
 
         self.__searchLineEdit.textChanged.connect(self.__searchLineEditTextChanged)
