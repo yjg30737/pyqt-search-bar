@@ -45,6 +45,8 @@ if __name__ == "__main__":
 
 #### Result
 
+<b>Note: This is very first version, so it is different to current one especially the buttons' icon.</b>
+
 Result that label, close button exist
 
 ![image](https://user-images.githubusercontent.com/55078043/145547732-50cd6c6b-3511-4e6c-86c3-b07b1449a5ce.png)
