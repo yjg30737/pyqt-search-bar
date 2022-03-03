@@ -95,9 +95,8 @@ class SearchBar(QWidget):
         self.__label.setVisible(visibility)
 
     def __setStyle(self):
-        caller_path = os.path.dirname(inspect.getframeinfo(sys._getframe(1)).filename)
-        self.__searchBtn.setIcon(os.path.join(caller_path, 'ico\search.svg').replace('\\', '/'))
-        self.__closeBtn.setIcon(os.path.join(caller_path, 'ico\close.svg').replace('\\', '/'))
+        self.__searchBtn.setIcon('ico\search.svg')
+        self.__closeBtn.setIcon('ico\close.svg')
         PyQtResourceHelper.setStyleSheet([self.__searchLineEdit, self.__searchBar, self],
                                          ['style/lineedit.css', 'style/search_bar.css', 'style/widget.css'])
 
