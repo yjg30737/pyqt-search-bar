@@ -5,7 +5,7 @@ PyQt search bar
 PyQt5 >= 5.8
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-search-bar.git --upgrade```
+`python -m pip install pyqt-search-bar`
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
