@@ -1,8 +1,15 @@
 from setuptools import setup, find_packages
+import codecs
+import os
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
 
 setup(
     name='pyqt-search-bar',
-    version='0.2.0',
+    version='0.0.1',
     author='Jung Gyu Yoon',
     author_email='yjg30737@gmail.com',
     license='MIT',
@@ -11,9 +18,11 @@ setup(
                   'pyqt_search_bar.ico': ['close.svg', 'search.svg']},
     description='PyQt search bar',
     url='https://github.com/yjg30737/pyqt-search-bar.git',
+    long_description_content_type='text/markdown',
+    long_description=long_description,
     install_requires=[
         'PyQt5>=5.8',
-        'pyqt-resource-helper @ git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main',
-        'pyqt-svg-icon-pushbutton @ git+https://git@github.com/yjg30737/pyqt-svg-icon-pushbutton.git@main'
+        'pyqt-resource-helper>=0.0.1',
+        'pyqt-svg-icon-pushbutton>=0.0.1'
     ]
 )
