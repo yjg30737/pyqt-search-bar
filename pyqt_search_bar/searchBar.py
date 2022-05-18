@@ -1,10 +1,8 @@
-import os, inspect, sys
-
 from PyQt5.QtWidgets import QWidget, QLineEdit, QGridLayout, QLabel, \
     QHBoxLayout, QCompleter
 from PyQt5.QtCore import Qt, pyqtSignal
 from pyqt_resource_helper import PyQtResourceHelper
-from pyqt_svg_icon_pushbutton import SvgIconPushButton
+from pyqt_svg_button import SvgButton
 
 
 class SearchBar(QWidget):
@@ -16,14 +14,14 @@ class SearchBar(QWidget):
         super().__init__(parent)
         # search bar label
         self.__label = QLabel()
-        self.__closeBtn = SvgIconPushButton()
+        self.__closeBtn = SvgButton()
         self.__btns = []
 
         self._initUi()
 
     def _initUi(self):
         self.__searchLineEdit = QLineEdit()
-        self.__searchBtn = SvgIconPushButton()
+        self.__searchBtn = SvgButton()
 
         self.__btns.append(self.__searchBtn)
         self.__btns.append(self.__closeBtn)

@@ -23,6 +23,6 @@ setup(
     install_requires=[
         'PyQt5>=5.8',
         'pyqt-resource-helper>=0.0.1',
-        'pyqt-svg-icon-pushbutton>=0.0.1'
+        'pyqt-svg-button>=0.0.1'
     ]
 )
