@@ -9,7 +9,6 @@ class SearchBar(QWidget):
     # ex) searchBar.searched.connect(myMethod)
     # str is searched text
     searched = pyqtSignal(str)
-    instantSearched = pyqtSignal(str)
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -38,7 +37,6 @@ class SearchBar(QWidget):
         lay.setSpacing(2)
 
         self.__searchLineEdit.textChanged.connect(self.__searchLineEditTextChanged)
-        self.__searchLineEdit.textChanged.connect(self.__instantSearch)
         self.__searchLineEdit.setFocus()
 
         self.__searchBtn.setEnabled(False)
@@ -78,10 +76,6 @@ class SearchBar(QWidget):
         self.__setStyle()
 
         self.setLayout(lay)
-
-    def __instantSearch(self, text=None):
-        text = text if text else self.__searchLineEdit.text()
-        self.instantSearched.emit(text)
 
     def __search(self, text=None):
         text = text if text else self.__searchLineEdit.text()
