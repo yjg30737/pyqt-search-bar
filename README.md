@@ -13,7 +13,6 @@ PyQt5 >= 5.8
 
 ## Feature
 * Providing `searched(text: str)` signal to activate user-defined method after search.
-* `instantSearched(text: str)` signal to instant search feature
 * Set place holder directly with `setPlaceHolder(text: str)`.
 * Available to execute the search with either pressing enter or pressing the search button.
 * Toggled search button based on whether searchLineEdit(type is QLineEdit) is empty or not.
