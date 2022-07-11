@@ -49,3 +49,6 @@ Empty search bar (search button is disabled)
 Search bar which is not empty (search button is enabled)
 
 ![image](https://user-images.githubusercontent.com/55078043/167742674-9270435a-18f9-47fb-abf3-9144cb3d5035.png)
+
+See Also
+* <a href="https://github.com/yjg30737/pyqt-auto-search-bar">pyqt-auto-search-bar</a> - for instant search feature
