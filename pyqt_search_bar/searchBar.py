@@ -110,9 +110,6 @@ class SearchBar(QWidget):
     def getSearchBar(self):
         return self.__searchLineEdit
 
-    def getSearchLineEdit(self):
-        return self.__searchLineEdit
-
     def getSearchButton(self):
         return self.__searchBtn
 
