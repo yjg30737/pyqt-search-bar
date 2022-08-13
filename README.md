@@ -20,7 +20,7 @@ PyQt5 >= 5.8
 * Being able to set the label of the search bar with `setLabel(visibility: bool, text: str)`.
 * Being able to close the search bar with `setCloseBtn(visibility: bool)`.
 * Set search/close button's icon with `setSearchIcon(icon_filename: str)`, `setCloseIcon(icon_filename: str)`. Note: Icon should be SVG file.
-* Get search bar, search line edit, search/close button with `getSearchBar`, `getSearchLineEdit`, `getSearchButton`, `getCloseButton` to change style or feature.
+* Get search bar, search line edit, search/close button with `getSearchBar`, `getSearchButton`, `getCloseButton` to change style or feature.
 
 ## Example
 ### Basic
